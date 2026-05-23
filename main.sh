@@ -27,12 +27,12 @@ ask()   { read -p "$1" "$2"; }
 header() {
   clear
   echo "${CYAN}"
-  echo "╔══════════════════════════════════════════════╗"
-  echo "║           🪐  IPFS Node Manager              ║"
-  echo "╚══════════════════════════════════════════════╝"
+  echo "    ╔══════════════════════════════════════════════╗"
+  echo "    ║           🪐  IPFS Node Manager              ║"
+  echo "    ╚══════════════════════════════════════════════╝"
   echo ""
-  echo "   API: ${GREEN}${IPFS_API_URL}${CYAN}"
-  echo "   User: ${GREEN}${IPFS_USER}${RESET}"
+  echo "      API: ${GREEN}${IPFS_API_URL}${CYAN}"
+  echo "      User: ${GREEN}${IPFS_USER}${RESET}"
   echo
 }
 
@@ -283,18 +283,18 @@ load_config
 # ══════════════════════════════════════════════
 while true; do
   header
-  echo "       1. Node info"
-  echo "       2. Files (add / get / cat)"
-  echo "       3. MFS (files ls / cp / rm...)"
-  echo "       4. Pins"
-  echo "       5. Network / Swarm"
-  echo "       6. Repository & GC"
-  echo "       7. IPNS & keys"
-  echo "       8. Custom command"
+  echo "          1. Node info"
+  echo "          2. Files (add / get / cat)"
+  echo "          3. MFS (files ls / cp / rm...)"
+  echo "          4. Pins"
+  echo "          5. Network / Swarm"
+  echo "          6. Repository & GC"
+  echo "          7. IPNS & keys"
+  echo "          8. Custom command"
   echo
-  echo "       0 -> Exit"
+  echo "          0 -> Exit"
   echo
-  ask "                   Option: " opt
+  ask "                       Option: " opt
   case $opt in
     1) menu_node ;;
     2) menu_files ;;
